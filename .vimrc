@@ -1,6 +1,7 @@
 """""""""""""" Vundle end
 set nocompatible               " be iMproved
 filetype off                   " required!
+syntax on
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -28,7 +29,7 @@ set shiftwidth=2
 set tabstop=2
 
 " temporary
-autocmd FileType c,cc,cpp,h,hh,hpp setlocal shiftwidth=3 tabstop=3
+"autocmd FileType c,cc,cpp,h,hh,hpp setlocal shiftwidth=3 tabstop=3
 
 set number
 
@@ -41,3 +42,6 @@ set number
 
 :set colorcolumn=80
 :imap <C-L> <Esc>
+
+au BufRead,BufNewFile *.purs setfiletype haskell
+colorscheme evening
